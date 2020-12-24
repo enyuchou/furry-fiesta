@@ -13,11 +13,11 @@ The two python scripts, _"SMTP - Automatic email sending system"_ and _"upload_G
 
 ## SMTP - Automatic email sending system
 
-Simple Mail Transfer Protocol (SMTP) is the Python module that can automatically send out emails to multiple receivers. More information can refer to Real Python artical _"Sending Emails with Python"_, in which it teaches Python learners how to build an automated email sending system. 
+Simple Mail Transfer Protocol (SMTP) is the Python module that can automatically send out emails to multiple receivers. More information can refer to Real Python artical _"Sending Emails with Python"_, in which it teaches Python learners how to build an automated email sending system.  <br><br/>
 
-As mentioned above, the aim of my work was to send different files to different business partners, the first step was to manage the database. 
+As mentioned above, the aim of my work was to send different files to different business partners, the most important thing is to align the partners' names.  <br><br/>
 
-The most important thing of sending the customized email is to align the partner names.
+
 
 ```py
 file_list = []
