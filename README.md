@@ -27,4 +27,4 @@ for file in os.listdir():
         file_new = merchant + 'DATE' + extention
         os.rename(file, file_new)
         file_list.append(file_new)
-```py
+```
