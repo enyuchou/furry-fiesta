@@ -8,7 +8,7 @@ The project was done during my internship from Jan to Mar 2020.
 I was responsible to send out the statements of accounting to our over 100 business partners through email and archive those accounting documents to our team's Google Drive. 
 Since most of the work was manually done and usually cost a lot of time, I tried to build a Python system to automate and optimize the process.
 
-The two python scripts, _"SMTP - Automatic email sending system"_ and _"upload_Gdrive_final"_, shows the administrative part of my work. 
+The two python scripts, _"SMTP - Automatic email sending system"_ and _"upload_Gdrive_final"_, shows the administrative part of my work.  <br><br/>
 
 
 ## SMTP - Automatic email sending system
