@@ -15,9 +15,9 @@ The two python scripts, _"SMTP - Automatic email sending system"_ and _"upload_G
 
 Simple Mail Transfer Protocol (SMTP) is the Python module that can automatically send out emails to multiple receivers. More information can refer to Real Python artical _"Sending Emails with Python"_, in which it teaches Python learners how to build an automated email sending system.  <br><br/>
 
-As mentioned above, the aim of my work was to send different files to different business partners, the most important thing is to align the partners' names.  <br><br/>
+As mentioned above, the aim of my work was to send different files to different business partners, so the most important thing is to align the partners' names. The main logic of automatically sending out the different files is to make sure your file name and the merchants' names are exactly the same. Below two blocks showcase how I match the excel file that I intend to sent oud to the particular receivers. <br><br/>
 
-
+##### Create a list that includes all the file names. 
 
 ```py
 file_list = []
@@ -30,8 +30,9 @@ for file in os.listdir():
         os.rename(file, file_new)
         file_list.append(file_new)
 ```
+<br><br/>
 
-
+##### Matching of the merchants names and the file names
 ```py
 for i in file_list:
     filename = file_list[n]
