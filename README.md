@@ -17,6 +17,8 @@ Simple Mail Transfer Protocol (SMTP) is the Python module that can automatically
 
 As mentioned above, the aim of my work was to send different files to different business partners, the first step was to manage the database. 
 
+The most important thing of sending the customized email is to align the partner names.
+
 ```py
 file_list = []
 
@@ -27,4 +29,17 @@ for file in os.listdir():
         file_new = merchant + 'DATE' + extention
         os.rename(file, file_new)
         file_list.append(file_new)
+```
+
+
+```
+for i in file_list:
+    filename = file_list[n]
+
+    with open('contacts_file.csv', 'r') as file0:
+        reader0 = csv.reader(file0)
+        next(reader0)
+        for name0, email0 in reader0:
+            subject_merchant = name0
+            name1 = name0.replace(' ', '') + 'DATE' + '.xlsx'
 ```
