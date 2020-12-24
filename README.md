@@ -32,7 +32,7 @@ for file in os.listdir():
 ```
 
 
-```
+```py
 for i in file_list:
     filename = file_list[n]
 
