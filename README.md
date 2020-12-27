@@ -2,44 +2,8 @@
 
 Hello!
 
-This side project was done during my internship from Jan to Mar 2020. The object of the project is to improve the effieciecy and the accuracy of administrative work.
+This side project was done during my internship from Jan to Mar 2020. The object of the project is to improve the effieciecy and the accuracy of administrative work. <br><br/>
 
-I was responsible to send out the statements of accounting to our over 100 business partners through email and archive those accounting documents to our team's Google Drive. 
-Since most of the work was manually done and usually cost a lot of time, I tried to build a Python system to automate and optimize the process.
+We had more than 100 business partners, and each of them required their own monthly statement of accounting. Usually, we sent the files through email and archived the documents by uploading to Google Drive. As the work was manually done and usually took a lot of time to ensure the accuracy, I did research and built a Python system to automate and optimize the process. The python modules I used are Simple Mail Transfer Protocol (SMTP) and PyDrive. The python script, _"SMTP - Automatic email sending system"_, describes how I developed an automated email sending system that can customize the email content and attachment. On the other hand, _"upload_Gdrive_final"_ showcases how to automatically upload the files from the local device to Google Drive. The script also includes the solution of uploading the file to the particular folder when there are multiple team drives. Moreover, for those new merchants, the system will also create new folders in the team drive. <br><br/>
 
-The two python scripts, _"SMTP - Automatic email sending system"_ and _"upload_Gdrive_final"_, shows the administrative part of my work.  <br><br/>
-
-
-## SMTP - Automatic email sending system
-
-Simple Mail Transfer Protocol (SMTP) is the Python module that can automatically send out emails to multiple receivers. More information can refer to Real Python artical _"Sending Emails with Python"_, in which it teaches Python learners how to build an automated email sending system.  <br><br/>
-
-As mentioned above, the aim of my work was to send different files to different business partners, so the most important thing is to align the partners' names. The main logic of automatically sending out the different files is to make sure your file name and the merchants' names are exactly the same. Below two blocks showcase how I match the excel file that I intend to sent oud to the particular receivers. <br><br/>
-
-##### Create a list that includes all the file names. 
-
-```py
-file_list = []
-
-for file in os.listdir():
-    if file.endswith('.xlsx'):
-        merchant = os.path.splitext(file)[0]
-        extention = os.path.splitext(file)[1]
-        file_new = merchant + 'DATE' + extention
-        os.rename(file, file_new)
-        file_list.append(file_new)
-```
-<br><br/>
-
-##### Matching of the merchants names and the file names
-```py
-for i in file_list:
-    filename = file_list[n]
-
-    with open('contacts_file.csv', 'r') as file0:
-        reader0 = csv.reader(file0)
-        next(reader0)
-        for name0, email0 in reader0:
-            subject_merchant = name0
-            name1 = name0.replace(' ', '') + 'DATE' + '.xlsx'
-```
+The most important thing of building this Python system is the consistency of the data. Take the SMTP system for example, the file name and the merchant name should always be consistent so that the system won't fail or send the accounting document to the wrong receivers. GDrive system is also the same thing that data should be well managed, otherwise, files cannot be uploaded susccessfully. These are a brief introduction and important notes to my first Python side project. Hope this can help the administrative work if there is a need. Happy coding! 
